@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tidy-downloads"
+version = "0.1.0"
+description = "A powerful CLI tool to organize, analyze, deduplicate, and tidy messy download folders."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "CLI Tools" }
+]
+keywords = ["downloads", "organizer", "cli", "file-manager", "deduplication"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+tidy-downloads = "tidy_downloads.cli:main"
+tidy = "tidy_downloads.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
